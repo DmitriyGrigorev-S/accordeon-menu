@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.accordeon {
+    display: block;
+    width: 100%;
+    background: #f5f6f8;
+    padding: 25px 0 35px;
+    overflow: hidden;
+}
+
+.accordeon__wrap {
+    margin-bottom: 20px;
+}
+
+.accordeon__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 20px;
+
+    color: #414141;
+}
+
+.accordeon__head {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #414141;
+    padding: 13px 0 13px 15px;
+
+    border: 1px solid #41633a;
+    background: #fff;
+    border-radius: 0;
+
+    cursor: pointer;
+}
+
+.accordeon__body-text p {
+    margin: 0 0 10px;
+}
+
+.accordeon__head.active {
+    background: #41633a;
+    border: 1px solid #41633a;
+    color: #fff;
+}
+
+.accordeon__head.active .cross {
+    background: #fff;
+}
+
+.accordeon__head.active .cross::before {
+    display: none;
+}
+
+.accordeon__head .cross {
+    position: absolute;
+    height: 2px;
+    width: 16px;
+    background: #41633a;
+    top: 50%;
+    right: 15px;
+    transform: translateX(-50%);
+}
+
+.accordeon__head .cross::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 7px;
+
+    height: 16px;
+    width: 2px;
+    background: #41633a;
+}
+
+.accordeon__body {
+    display: none;
+    padding-top: 20px;
+}
+
+.accordeon__body-img {
+    position: relative;
+}
+
+.accordeon__body-img img {
+    max-width: 100%;
+    top: -10px;
+}
+
+.accordeon .lable-right {
+    position: absolute;
+    right: -20px;
+    bottom: 35px;
+    top: auto;
+    left: auto;
+
+    max-width: 115px;
+    width: 115px;
+    height: 115px;
+}
+
+.accordeon .lable-right--bottom-45 {
+    bottom: 45px;
+}
+
+.accordeon-text {
+    margin-bottom: 20px;
+}
+
+.accordeon-text--block .title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 8px;
+    color: #414141;
+}
+
+p {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.accordeon__body.active {
+    display: block;
+}
+
+.block {
+    padding: 20px 0;
+    margin: 20px 0 150px;
+}
+
+.block-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
